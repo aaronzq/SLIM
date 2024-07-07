@@ -46,7 +46,7 @@ loadExistingPSF = true;                    % whether to load PSF mat file saved 
 iter = 16;                                 % iteration number
 intensityScale = 0.1;                      % global intensity scaling of recontruction results before saving
 debug = false;                             % debug mode; if enabled, it will save and show intermediate results
-usingGPU = true;                           % whether to use GPU; highly recommended 
+usingGPU = false;                           % whether to use GPU; highly recommended 
 conv_type = 'simple_fft';                  % convolution implementation: 'space_domain', space domain convolution, slowest; 'fft', fft based convolution; 'simple_fft', simplified fft based convolution, might be subject to artifacts (rarely though), fastest 
 
 
@@ -77,10 +77,10 @@ parameterPath = fullfile(savePath, 'Parameters');
 if ~exist(parameterPath, 'dir')
     mkdir(parameterPath);
 end
-jsonText = jsonencode(var2struct('filePath','psfPath','psfName','dataPath','dataName','saveName','scaleRatio',...
+jsonText = jsonencode(var2struct('filePath','psfPath','psfName','scaleRatio',...
     'RESOLUTION','PSF_background','background','loadExistingPSF','iter','intensityScale','debug','usingGPU','conv_type',...
-    'angles','ROIpositions', 'savePath'),"PrettyPrint",true);
-fid = fopen(fullfile(parameterPath,'Parameters.json'), 'w');
+    'angles','ROIpositions', 'dataPath','dataName','savePath','saveName'),"PrettyPrint",true);
+fid = fopen(fullfile(parameterPath,['Parameters_' char(datetime('now','format','yyyy-MM-dd-HH-mm-ss-SSS')), '.json' ]), 'w');
 fprintf(fid, '%s', jsonText);
 fclose(fid);
 %% read PSFs
