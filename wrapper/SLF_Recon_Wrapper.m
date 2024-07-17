@@ -47,7 +47,7 @@ try
     % data directory
     dataPath = config_struct.dataPath;
     dataName = config_struct.dataName;
-    savePath = config_struct.savePath;
+    savePath = fullfile(filePath, config_struct.savePath, dataPath);
     saveName = config_struct.saveName;
 
 catch ME
