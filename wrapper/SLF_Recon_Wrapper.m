@@ -37,8 +37,8 @@ try
     % deconvolution configurations
     iter = config_struct.iter;                                 % iteration number
     intensityScale = config_struct.intensityScale;             % global intensity scaling of recontruction results before saving
-    usingGPU = false;                                          % whether to use GPU; highly recommended 
-    conv_type = 'simple_fft';                                  % convolution implementation: 'space_domain', space domain convolution, slowest; 'fft', fft based convolution; 'simple_fft', simplified fft based convolution, might be subject to artifacts (rarely though), fastest 
+    usingGPU = config_struct.usingGPU;                                          % whether to use GPU; highly recommended 
+    conv_type = config_struct.conv_type;                                  % convolution implementation: 'space_domain', space domain convolution, slowest; 'fft', fft based convolution; 'simple_fft', simplified fft based convolution, might be subject to artifacts (rarely though), fastest 
 
     % in-plane rotations angles
     angles = config_struct.angles;
