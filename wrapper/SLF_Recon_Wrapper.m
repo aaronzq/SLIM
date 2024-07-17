@@ -98,6 +98,9 @@ end
 %% reconstruction
 if parallel
     parfor t = 1:length(dataName)  
+        
+        tic;
+
         if verbose
             disp(['Reconstructing frame ' num2str(t) '...']);
         end
@@ -129,6 +132,9 @@ if parallel
             IR_CPU = IR;
         end
         imwrite3d(uint16(IR_CPU* intensityScale), fullfile(savePath, [saveName{t} '.tif']));
+        
+        disp(['Reconstructed frame ' dataName{t} ' in ' num2str(toc) '.'])
+
     end
 else
     for t = 1:length(dataName)  

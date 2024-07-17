@@ -6,24 +6,24 @@
 configName = 'config1';
 
 % main file directory
-filePath = './examples/beads';
+filePath = '../20240702/';
 psfPath = 'PSF_320';
 
 % read PSFs, implementation is subject to PSF data naming conventions
 psfName = {};
-psfLocations = -200:4:200; % 200 um to 200 um at a step size 4 um
+psfLocations = -150:4:150; % 200 um to 200 um at a step size 4 um
 for p = 1:length(psfLocations)
     psfName{p}=[num2str(psfLocations(p)) '.tiff.tif'];
 end
 
 % data directory
-dataPath = 'data/beads_100ms_ROI_1455_320_LED';
+dataPath = 'data/leech1_1230us_800fps_ROI_1455_320_LED';
 
 % read raw data, implementation is subject to data naming conventions
 dataName = {};
 saveName = {};
 ind=1;
-for d = 1:1
+for d = 1000:9600
     dataName{ind}=['ss_single_' num2str(d) '.tiff']; % PVCAM teledyne saves images in ss_single_i.tiff
     saveName{ind}=['ss_single_' num2str(d)];
     ind = ind + 1;
@@ -31,16 +31,16 @@ end
 
 % hardware configurations
 scaleRatio = 0.2;                          % vertical squeezing ratio
-RESOLUTION = 295;                          % horizontal pixel resolution of each sub-aperture
+RESOLUTION = 305;                          % horizontal pixel resolution of each sub-aperture
 PSF_background = 200;                      % PSF data background, not used if loadExistingPSF = true
-background = 1500;                         % raw image background
-loadExistingPSF = true;                    % whether to load PSF mat file saved during previous reconstruction session; if not, PSF will be read and processed from raw PSF images
+background = 200;                         % raw image background
+loadExistingPSF = false;                    % whether to load PSF mat file saved during previous reconstruction session; if not, PSF will be read and processed from raw PSF images
 
 % deconvolution configurations
-iter = 16;                                 % iteration number
-intensityScale = 0.1;                      % global intensity scaling of recontruction results before saving
+iter = 8;                                 % iteration number
+intensityScale = 1;                      % global intensity scaling of recontruction results before saving
 debug = false;                             % debug mode; if enabled, it will save and show intermediate results
-usingGPU = false;                           % whether to use GPU; highly recommended 
+usingGPU = true;                           % whether to use GPU; highly recommended 
 conv_type = 'simple_fft';                  % convolution implementation: 'space_domain', space domain convolution, slowest; 'fft', fft based convolution; 'simple_fft', simplified fft based convolution, might be subject to artifacts (rarely though), fastest 
 
 % in-plane rotations angles
@@ -53,7 +53,7 @@ angles = 2*[-25.85;-35;-43.65;32.18;23.57;-9.75;-19.2;-37.85;35.66;13.295;7.74;-
 load(fullfile(filePath, psfPath, 'Calibration.mat'));
 savePath = fullfile(filePath, 'Recon_RL', dataPath);
 
-configPath = './RUN';
+configPath = '../RUN';
 if ~exist(configPath, 'dir')
     mkdir(configPath);
 end
