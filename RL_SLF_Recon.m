@@ -12,25 +12,26 @@ addpath('./utils');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%User parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % main file directory
-filePath = './examples/beads';
-psfPath = 'PSF_320';
+filePath = 'F:\ScaleLightField\MouseSetup\20240811';
+psfPath = 'PSF_330';
 
 % read PSFs, implementation is subject to PSF data naming conventions
 psfName = {};
-psfLocations = -200:4:200; % 200 um to 200 um at a step size 4 um
+psfLocations = -600:4:600; % 200 um to 200 um at a step size 4 um
 for p = 1:length(psfLocations)
     psfName{p}=[num2str(psfLocations(p)) '.tiff.tif'];
 end
-loadExistingPSF = true;                    % whether to load PSF mat file saved during previous reconstruction session; if not, PSF will be read and processed from raw PSF images
+loadExistingPSF = false;                    % whether to load PSF mat file saved during previous reconstruction session; if not, PSF will be read and processed from raw PSF images
+PSF_background = 350;                      % PSF data background, not used if loadExistingPSF = true
 
 % data directory
-dataPath = 'data/beads_100ms_ROI_1455_320_LED';
+dataPath = 'data/beads_1230us_ROI_1445_330_LED';
 
 % read raw data, implementation is subject to data naming conventions
 dataName = {};
 saveName = {};
 ind=1;
-for d = 1:1
+for d = 1:10
     dataName{ind}=['ss_single_' num2str(d) '.tiff']; % PVCAM teledyne saves images in ss_single_i.tiff
     saveName{ind}=['ss_single_' num2str(d)];
     ind = ind + 1;
@@ -38,21 +39,28 @@ end
 
 % hardware configurations
 scaleRatio = 0.2;                          % vertical squeezing ratio
-RESOLUTION = 295;                          % horizontal pixel resolution of each sub-aperture
-PSF_background = 200;                      % PSF data background, not used if loadExistingPSF = true
-background = 1500;                         % raw image background
+RESOLUTION = 305;                          % horizontal pixel resolution of each sub-aperture
+background = 110;                         % raw image background
 
 % deconvolution configurations
-iter = 16;                                 % iteration number
+iter = 8;                                 % iteration number
 intensityScale = 0.1;                      % global intensity scaling of recontruction results before saving
-debug = false;                             % debug mode; if enabled, it will save and show intermediate results
+debug = true;                             % debug mode; if enabled, it will save and show intermediate results
 usingGPU = true;                           % whether to use GPU; highly recommended 
 conv_type = 'simple_fft';                  % convolution implementation: 'space_domain', space domain convolution, slowest; 'fft', fft based convolution; 'simple_fft', simplified fft based convolution, might be subject to artifacts (rarely though), fastest 
 
-
+% mouse setup
 % in-plane rotations angles
+
 % the 29 sub-aperture setup used in the paper
-angles = 2*[-25.85;-35;-43.65;32.18;23.57;-9.75;-19.2;-37.85;35.66;13.295;7.74;-3.65;-6.15;-41;41.9;38.795;4.405;0.905;9.915;16.35;26.125;-28.28;-15.3;-11.955;19.405;28.85;-47.5;-31.4;-20.85];
+angles = 2*[-23.7;-33.05;-42.8;31.665;22.46;-8.025;-17.8;-36.45;34.825;13.255;7.74;-0.835;-5.15;-39.95;41.9;38.615;4.2;1.685;11.395;17.155;25.63;-26.85;-15.05;-12.45;20.15;29.86;-45.4;-29.85;-19.35]; % rotation angles
+
+% fish setup
+% in-plane rotations angles
+
+% the 29 sub-aperture setup used in the paper
+% angles = 2*[-25.85;-35;-43.65;32.18;23.57;-9.75;-19.2;-37.85;35.66;13.295;7.74;-3.65;-6.15;-41;41.9;38.795;4.405;0.905;9.915;16.35;26.125;-28.28;-15.3;-11.955;19.405;28.85;-47.5;-31.4;-20.85];
+
 % the 19 sub-aperture setup used in the paper
 % angles = 2*[-9.75;-19.2;-37.85;35.66;13.295;7.74;-3.65;-6.15;-41;41.9;38.795;4.405;0.905;9.915;16.35;26.125;-28.28;-15.3;-11.955;];
 
