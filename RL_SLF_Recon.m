@@ -38,7 +38,7 @@ end
 
 % hardware configurations
 scaleRatio = 0.2;                          % vertical squeezing ratio
-RESOLUTION = 295;                          % horizontal pixel resolution of each sub-aperture
+RESOLUTION = 305;                          % horizontal pixel resolution of each sub-aperture
 PSF_background = 200;                      % PSF data background, not used if loadExistingPSF = true
 background = 1500;                         % raw image background
 
