@@ -1,4 +1,11 @@
 function forward_projection = SLF_forward_GPU(vol, angles, H, en_mask, conv_type)
+%%%  Forward projection for SLF using gpuArray
+%%%  Input:
+%%%     vol: row,col,depth
+%%%  Output:
+%%%     forward_projection: row,col,view
+%%%  Author: Zhaoqiang Wang, 2023 
+
 [resolution1, resolution2, ndepth, nprojection] = size(H);
 x = ((1:resolution2)-resolution2/2)/resolution2;     y = x;
 [X,Y] = meshgrid(x,y);

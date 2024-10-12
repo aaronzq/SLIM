@@ -12,7 +12,7 @@ addpath('./utils');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%User parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % main file directory
-filePath = 'F:\ScaleLightField\MouseSetup\20240811';
+filePath = 'E:\GaoLab\mice_experiments\20240811';
 psfPath = 'PSF_330';
 
 % read PSFs, implementation is subject to PSF data naming conventions
@@ -31,7 +31,7 @@ dataPath = 'data/beads_1230us_ROI_1445_330_LED';
 dataName = {};
 saveName = {};
 ind=1;
-for d = 1:10
+for d = 1:1
     dataName{ind}=['ss_single_' num2str(d) '.tiff']; % PVCAM teledyne saves images in ss_single_i.tiff
     saveName{ind}=['ss_single_' num2str(d)];
     ind = ind + 1;
@@ -43,11 +43,12 @@ RESOLUTION = 305;                          % horizontal pixel resolution of each
 background = 110;                         % raw image background
 
 % deconvolution configurations
-iter = 8;                                 % iteration number
-intensityScale = 0.1;                      % global intensity scaling of recontruction results before saving
-debug = true;                             % debug mode; if enabled, it will save and show intermediate results
+iter = 16;                                 % iteration number
+intensityScale = 1;                      % global intensity scaling of recontruction results before saving
+debug = false;                             % debug mode; if enabled, it will save and show intermediate results
 usingGPU = true;                           % whether to use GPU; highly recommended 
 conv_type = 'simple_fft';                  % convolution implementation: 'space_domain', space domain convolution, slowest; 'fft', fft based convolution; 'simple_fft', simplified fft based convolution, might be subject to artifacts (rarely though), fastest 
+crop_delta = 0;
 
 % mouse setup
 % in-plane rotations angles
@@ -156,6 +157,7 @@ if usingGPU
 else
     IR_CPU = IR;
 end
-imwrite3d(uint16(IR_CPU* intensityScale), fullfile(savePath, [saveName{t} '.tif']));
+IR_CROP = crop_circ_boundary(IR_CPU* intensityScale, crop_delta);
+imwrite3d(uint16(IR_CROP), fullfile(savePath, [saveName{t} '.tif']));
 end
 disp('Reconstructions all finished.');

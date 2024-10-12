@@ -1,5 +1,11 @@
-function backward_projection = SLF_backward(projection, angles, Ht,en_mask)
-    
+function backward_projection = SLF_backward(projection, angles, Ht, en_mask)
+%%%  Backward projection for SLF
+%%%  Input:
+%%%     projection: row,col,view
+%%%  Output:
+%%%     backward_projection: row,col,depth
+%%%  Author: Zhaoqiang Wang, 2023 
+
     [~, resolution2, ndepth, nprojection] = size(Ht);
     
 

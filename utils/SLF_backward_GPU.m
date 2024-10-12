@@ -1,4 +1,11 @@
-function backward_projection = SLF_backward_GPU(projection, angles, Ht,en_mask, conv_type)   
+function backward_projection = SLF_backward_GPU(projection, angles, Ht, en_mask, conv_type)
+%%%  Backward projection for SLF using gpuArray
+%%%  Input:
+%%%     projection: row,col,view
+%%%  Output:
+%%%     backward_projection: row,col,depth
+%%%  Author: Zhaoqiang Wang, 2023 
+
 [~, resolution2, ndepth, nprojection] = size(Ht);
 x = ((1:resolution2)-resolution2/2)/resolution2;     y = x;
 [X,Y] = meshgrid(x,y);

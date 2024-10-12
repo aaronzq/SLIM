@@ -1,11 +1,16 @@
 function [estimate, cvg] = RL_solver_acc(img, VolumeGuess, forward_func, backward_func, iter, verbose)
-%  Solver for (Light Field) Richardson Lucy Deconvolution
-%  img: 2D raw measurement
-%  VolumeGuess: 3D reconstruction initialization
-%  forward_func, backward_func: forward and backward function handles
-%  iter: number of iterations
-%  verbose: enable to print every iteration's time
-%  Author: Zhaoqiang Wang
+%%%  Solver for (Light Field) Richardson Lucy Deconvolution
+%%%  Input:
+%%%      img: raw measurement
+%%%      VolumeGuess: estimate initialization
+%%%      forward_func, backward_func: forward and backward function handles
+%%%                   compatible with img and VolumeGuess/estimate's formats
+%%%      iter: number of iterations
+%%%      verbose: enable to print every iteration's time
+%%%  Output:
+%%%      estimate: the estimated signals 
+%%%      cvg: convergency
+%%%  Author: Zhaoqiang Wang, 2023
 
 
     cvg = zeros(iter,1);  
