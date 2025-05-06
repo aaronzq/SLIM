@@ -698,6 +698,33 @@ function calibrate_Callback(hObject, eventdata, handles)
 % hObject    handle to calibrate (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+addpath('utils/');
+disp('Semi-auto sub-aperture center calibration...');
+disp('Choose a PSF image at native focal plane to calibrate view centers.');
+[file_name, file_path] = uigetfile({'*.tif','*.tiff'}, 'Choose a PSF image at native focal plane to calibrate view centers.');
+img = imread(fullfile(file_path,file_name));
+scale_ratio = str2double(get(handles.scaleratio, 'String'));
+resolution = str2double(get(handles.resolution, 'String'));
+num_roi = str2double(get(handles.numviews, 'String'));
+temp = get(handles.uitable,'Data');
+angles = temp(:,1);
+
+h = msgbox('Follow the instructions in command line.');
+disp('------------------------------------------------------');
+usrinput1 = str2num(input('What is the arrangement of views, i.e. number of views per row, from up to down? \n Type numbers separated by comma(,) or space:    ', 's'));
+while sum(usrinput1)~=num_roi
+    disp('------------------------------------------------------');
+    disp('The input arrangment does not add up to the total number of views. Please try agagin.');
+    usrinput1 = str2num(input('What is the arrangement of views, i.e. number of views per row, from up to down? \n Type numbers separated by comma(,) or space:    ', 's'));
+end
+disp('------------------------------------------------------');
+usrinput2 = str2num(input('What is the background of the selected image? Type a scalar number:    ', 's'));
+ROIpositions = calibration_semiauto_func(img, scale_ratio, resolution, num_roi, usrinput1, angles, usrinput2);
+set(handles.uitable, 'Data', [angles ROIpositions]);
+save(fullfile(file_path, 'Calibration.mat'), 'ROIpositions');
+drawViews(handles);
+close(h);
+     
 
 
 % --- Executes on button press in loadcalibration.
@@ -706,6 +733,7 @@ function loadcalibration_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 disp('Load subaperture center positions');
+disp('Choose subaperture position calibration mat file.');
 [file_name, file_path] = uigetfile('*.mat', 'Choose subaperture position calibration mat file.');
 load(fullfile(file_path, file_name));
 temp1 = get(handles.uitable,'Data');
@@ -732,6 +760,7 @@ function loadconfigs_Callback(hObject, eventdata, handles)
 global config_struct;
 
 disp('Load configurations from json files.');
+disp('Choose a json file to load configurations.');
 [file_name, file_path] = uigetfile('*.json', 'Choose a json file to load configurations.');
 fid = fopen(fullfile(file_path, file_name), 'r');
 if fid>=3
