@@ -1,0 +1,256 @@
+{
+  "filePath": "./examples/leech",
+  "psfPath": "PSF_320",
+  "loadExistingPSF": 1,
+  "scaleRatio": 0.2,
+  "RESOLUTION": 295,
+  "PSF_background": 200,
+  "background": 350,
+  "iter": 8,
+  "intensityScale": 1,
+  "usingGPU": 1,
+  "conv_type": "simple_fft",
+  "numViews": 29,
+  "angles": [
+    -51.7,
+    -70,
+    -87.3,
+    64.36,
+    47.14,
+    -19.5,
+    -38.4,
+    -75.7,
+    71.32,
+    26.59,
+    15.48,
+    -7.3,
+    -12.3,
+    -82,
+    83.8,
+    77.59,
+    8.81,
+    1.81,
+    19.83,
+    32.7,
+    52.25,
+    -56.56,
+    -30.6,
+    -23.91,
+    38.81,
+    57.7,
+    -95,
+    -62.8,
+    -41.7
+  ],
+  "ROIpositions": [
+    [
+      957,
+      31
+    ],
+    [
+      1299,
+      34
+    ],
+    [
+      1659,
+      33
+    ],
+    [
+      1939,
+      33
+    ],
+    [
+      2292,
+      33
+    ],
+    [
+      760,
+      99
+    ],
+    [
+      1110,
+      97
+    ],
+    [
+      1464,
+      97
+    ],
+    [
+      1777,
+      98
+    ],
+    [
+      2124,
+      95
+    ],
+    [
+      2474,
+      97
+    ],
+    [
+      585,
+      159
+    ],
+    [
+      930,
+      159
+    ],
+    [
+      1285,
+      158
+    ],
+    [
+      1620,
+      162
+    ],
+    [
+      1972,
+      164
+    ],
+    [
+      2300,
+      155
+    ],
+    [
+      2646,
+      156
+    ],
+    [
+      753,
+      220
+    ],
+    [
+      1099,
+      220
+    ],
+    [
+      1455,
+      224
+    ],
+    [
+      1788,
+      219
+    ],
+    [
+      2128,
+      218
+    ],
+    [
+      2478,
+      214
+    ],
+    [
+      939,
+      289
+    ],
+    [
+      1282,
+      285
+    ],
+    [
+      1604,
+      281
+    ],
+    [
+      1990,
+      266
+    ],
+    [
+      2294,
+      281
+    ]
+  ],
+  "dataPath": "data/leech5_1200us_800fps_ROI_1455_320_LED",
+  "psfZ1": -150,
+  "psfZ2": 150,
+  "psfZStep": 4,
+  "psfFormat": "%d.tiff.tif",
+  "dataT1": 1150,
+  "dataT2": 1150,
+  "dataFormat": "ss_single_%d.tiff",
+  "psfName": [
+    "-150.tiff.tif",
+    "-146.tiff.tif",
+    "-142.tiff.tif",
+    "-138.tiff.tif",
+    "-134.tiff.tif",
+    "-130.tiff.tif",
+    "-126.tiff.tif",
+    "-122.tiff.tif",
+    "-118.tiff.tif",
+    "-114.tiff.tif",
+    "-110.tiff.tif",
+    "-106.tiff.tif",
+    "-102.tiff.tif",
+    "-98.tiff.tif",
+    "-94.tiff.tif",
+    "-90.tiff.tif",
+    "-86.tiff.tif",
+    "-82.tiff.tif",
+    "-78.tiff.tif",
+    "-74.tiff.tif",
+    "-70.tiff.tif",
+    "-66.tiff.tif",
+    "-62.tiff.tif",
+    "-58.tiff.tif",
+    "-54.tiff.tif",
+    "-50.tiff.tif",
+    "-46.tiff.tif",
+    "-42.tiff.tif",
+    "-38.tiff.tif",
+    "-34.tiff.tif",
+    "-30.tiff.tif",
+    "-26.tiff.tif",
+    "-22.tiff.tif",
+    "-18.tiff.tif",
+    "-14.tiff.tif",
+    "-10.tiff.tif",
+    "-6.tiff.tif",
+    "-2.tiff.tif",
+    "2.tiff.tif",
+    "6.tiff.tif",
+    "10.tiff.tif",
+    "14.tiff.tif",
+    "18.tiff.tif",
+    "22.tiff.tif",
+    "26.tiff.tif",
+    "30.tiff.tif",
+    "34.tiff.tif",
+    "38.tiff.tif",
+    "42.tiff.tif",
+    "46.tiff.tif",
+    "50.tiff.tif",
+    "54.tiff.tif",
+    "58.tiff.tif",
+    "62.tiff.tif",
+    "66.tiff.tif",
+    "70.tiff.tif",
+    "74.tiff.tif",
+    "78.tiff.tif",
+    "82.tiff.tif",
+    "86.tiff.tif",
+    "90.tiff.tif",
+    "94.tiff.tif",
+    "98.tiff.tif",
+    "102.tiff.tif",
+    "106.tiff.tif",
+    "110.tiff.tif",
+    "114.tiff.tif",
+    "118.tiff.tif",
+    "122.tiff.tif",
+    "126.tiff.tif",
+    "130.tiff.tif",
+    "134.tiff.tif",
+    "138.tiff.tif",
+    "142.tiff.tif",
+    "146.tiff.tif",
+    "150.tiff.tif"
+  ],
+  "dataName": [
+    "ss_single_1150.tiff"
+  ],
+  "saveName": [
+    "ss_single_1150"
+  ],
+  "savePath": "Recon_RL"
+}

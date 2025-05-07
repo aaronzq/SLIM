@@ -1,0 +1,281 @@
+{
+  "filePath": "./examples/beads",
+  "psfPath": "PSF_320",
+  "loadExistingPSF": 1,
+  "scaleRatio": 0.2,
+  "RESOLUTION": 305,
+  "PSF_background": 200,
+  "background": 1500,
+  "iter": 16,
+  "intensityScale": 0.1,
+  "usingGPU": 1,
+  "conv_type": "simple_fft",
+  "numViews": 29,
+  "angles": [
+    -51.7,
+    -70,
+    -87.3,
+    64.36,
+    47.14,
+    -19.5,
+    -38.4,
+    -75.7,
+    71.32,
+    26.59,
+    15.48,
+    -7.3,
+    -12.3,
+    -82,
+    83.8,
+    77.59,
+    8.81,
+    1.81,
+    19.83,
+    32.7,
+    52.25,
+    -56.56,
+    -30.6,
+    -23.91,
+    38.81,
+    57.7,
+    -95,
+    -62.8,
+    -41.7
+  ],
+  "ROIpositions": [
+    [
+      956,
+      31
+    ],
+    [
+      1300,
+      34
+    ],
+    [
+      1660,
+      33
+    ],
+    [
+      1940,
+      33
+    ],
+    [
+      2294,
+      33
+    ],
+    [
+      760,
+      98
+    ],
+    [
+      1110,
+      98
+    ],
+    [
+      1464,
+      96
+    ],
+    [
+      1778,
+      98
+    ],
+    [
+      2125,
+      95
+    ],
+    [
+      2475,
+      96
+    ],
+    [
+      584,
+      159
+    ],
+    [
+      929,
+      159
+    ],
+    [
+      1285,
+      158
+    ],
+    [
+      1620,
+      162
+    ],
+    [
+      1972,
+      163
+    ],
+    [
+      2301,
+      156
+    ],
+    [
+      2648,
+      156
+    ],
+    [
+      753,
+      221
+    ],
+    [
+      1099,
+      220
+    ],
+    [
+      1454,
+      224
+    ],
+    [
+      1788,
+      218
+    ],
+    [
+      2129,
+      219
+    ],
+    [
+      2479,
+      213
+    ],
+    [
+      938,
+      288
+    ],
+    [
+      1281,
+      285
+    ],
+    [
+      1604,
+      281
+    ],
+    [
+      1991,
+      266
+    ],
+    [
+      2295,
+      281
+    ]
+  ],
+  "dataPath": "data/beads_100ms_ROI_1455_320_LED",
+  "psfZ1": -200,
+  "psfZ2": 200,
+  "psfZStep": 4,
+  "psfFormat": "%d.tiff.tif",
+  "dataT1": 1,
+  "dataT2": 1,
+  "dataFormat": "ss_single_%d.tiff",
+  "psfName": [
+    "-200.tiff.tif",
+    "-196.tiff.tif",
+    "-192.tiff.tif",
+    "-188.tiff.tif",
+    "-184.tiff.tif",
+    "-180.tiff.tif",
+    "-176.tiff.tif",
+    "-172.tiff.tif",
+    "-168.tiff.tif",
+    "-164.tiff.tif",
+    "-160.tiff.tif",
+    "-156.tiff.tif",
+    "-152.tiff.tif",
+    "-148.tiff.tif",
+    "-144.tiff.tif",
+    "-140.tiff.tif",
+    "-136.tiff.tif",
+    "-132.tiff.tif",
+    "-128.tiff.tif",
+    "-124.tiff.tif",
+    "-120.tiff.tif",
+    "-116.tiff.tif",
+    "-112.tiff.tif",
+    "-108.tiff.tif",
+    "-104.tiff.tif",
+    "-100.tiff.tif",
+    "-96.tiff.tif",
+    "-92.tiff.tif",
+    "-88.tiff.tif",
+    "-84.tiff.tif",
+    "-80.tiff.tif",
+    "-76.tiff.tif",
+    "-72.tiff.tif",
+    "-68.tiff.tif",
+    "-64.tiff.tif",
+    "-60.tiff.tif",
+    "-56.tiff.tif",
+    "-52.tiff.tif",
+    "-48.tiff.tif",
+    "-44.tiff.tif",
+    "-40.tiff.tif",
+    "-36.tiff.tif",
+    "-32.tiff.tif",
+    "-28.tiff.tif",
+    "-24.tiff.tif",
+    "-20.tiff.tif",
+    "-16.tiff.tif",
+    "-12.tiff.tif",
+    "-8.tiff.tif",
+    "-4.tiff.tif",
+    "0.tiff.tif",
+    "4.tiff.tif",
+    "8.tiff.tif",
+    "12.tiff.tif",
+    "16.tiff.tif",
+    "20.tiff.tif",
+    "24.tiff.tif",
+    "28.tiff.tif",
+    "32.tiff.tif",
+    "36.tiff.tif",
+    "40.tiff.tif",
+    "44.tiff.tif",
+    "48.tiff.tif",
+    "52.tiff.tif",
+    "56.tiff.tif",
+    "60.tiff.tif",
+    "64.tiff.tif",
+    "68.tiff.tif",
+    "72.tiff.tif",
+    "76.tiff.tif",
+    "80.tiff.tif",
+    "84.tiff.tif",
+    "88.tiff.tif",
+    "92.tiff.tif",
+    "96.tiff.tif",
+    "100.tiff.tif",
+    "104.tiff.tif",
+    "108.tiff.tif",
+    "112.tiff.tif",
+    "116.tiff.tif",
+    "120.tiff.tif",
+    "124.tiff.tif",
+    "128.tiff.tif",
+    "132.tiff.tif",
+    "136.tiff.tif",
+    "140.tiff.tif",
+    "144.tiff.tif",
+    "148.tiff.tif",
+    "152.tiff.tif",
+    "156.tiff.tif",
+    "160.tiff.tif",
+    "164.tiff.tif",
+    "168.tiff.tif",
+    "172.tiff.tif",
+    "176.tiff.tif",
+    "180.tiff.tif",
+    "184.tiff.tif",
+    "188.tiff.tif",
+    "192.tiff.tif",
+    "196.tiff.tif",
+    "200.tiff.tif"
+  ],
+  "dataName": [
+    "ss_single_1.tiff"
+  ],
+  "saveName": [
+    "ss_single_1"
+  ],
+  "savePath": "Recon_RL"
+}
