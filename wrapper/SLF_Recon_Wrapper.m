@@ -1,3 +1,12 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 3D Reconstruction code for squeezed light field microscopy (SLIM) using Richardson-Lucy Deconvolution
+%%
+%% Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy
+%% Authors: Wang, Zhaoqiang, Ruixuan Zhao, Daniel A. Wagenaar, Diego Espino, Liron Sheintuch, Ohr Benshlomo, Wenjun Kang et al. 
+%% Affiliation: University of California, Los Angeles; California Institute of Technology; University of Arizona  
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 function r = SLF_Recon_Wrapper(config_file, parallel, verbose)
 
 r = 0;

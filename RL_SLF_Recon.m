@@ -1,7 +1,10 @@
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 3D Reconstruction code for squeezed light field microscopy (SLIM) using Richardson-Lucy Deconvolution
-% Wang, Zhaoqiang, et al. "Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy." bioRxiv (2024)
-% Tested on Matlab 2022a, 2023a, GPU is recommended 
-%
+%%
+%% Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy
+%% Authors: Wang, Zhaoqiang, Ruixuan Zhao, Daniel A. Wagenaar, Diego Espino, Liron Sheintuch, Ohr Benshlomo, Wenjun Kang et al. 
+%% Affiliation: University of California, Los Angeles; California Institute of Technology; University of Arizona  
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Usage:
 % 1. Modify User parameters section for correct file path, save path, PSF and SLIM hardware configurations 
 % 2. Run
