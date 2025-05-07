@@ -23,7 +23,7 @@ Tested on Matlab `2022a`, `2023a`, `2024a`. GPU acceleration with Parallel Compu
 1. Run the GUI software __SLF_ReconGUI.m__ in Matlab.
 <img src='./assets/gui_screenshot.png' align="right" width=400> 
 
-2. Click the button __Load configs__ to load preset parameters for example data. These presets are json files in folders under `/examples`. The name of folders labels the sample type. For example, choose `/examples/config_beads.json` to reconstruct beads data.
+2. Click the button __Load configs__ to load preset parameters for example data. These presets are json files in folders under `/examples`. The name of folder labels the sample type. For example, choose `/examples/beads/config_beads.json` to reconstruct beads data.
 3. Click the button __Reconstruct__ to start reconstruction. The progress will be printed in command window. The results are saved in a new folder named `/Recon_RL` under the same directory of raw data.
 
 ## Code
