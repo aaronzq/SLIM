@@ -7,7 +7,7 @@ addpath('./utils');
 configName = 'config1';
 
 % main file directory
-filePath = '../20240702/';
+filePath = '../../20240702/';
 psfPath = 'PSF_320';
 
 % read PSFs, implementation is subject to PSF data naming conventions
@@ -54,7 +54,7 @@ angles = 2*[-25.85;-35;-43.65;32.18;23.57;-9.75;-19.2;-37.85;35.66;13.295;7.74;-
 load(fullfile(filePath, psfPath, 'Calibration.mat'));
 savePath = 'Recon_RL';
 
-configPath = './RUN';
+configPath = '../RUN';
 if ~exist(configPath, 'dir')
     mkdir(configPath);
 end
