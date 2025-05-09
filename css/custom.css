@@ -1,0 +1,65 @@
+/*************************************************************************
+ * Your custom CSS file
+ *************************************************************************/
+
+#custom-dropdown {
+  width: 240px;
+}
+
+/* body {
+  margin: 0px;
+  background-color: #ffffff;
+  font-family: 'PT Sans', 'Arial';
+} */
+h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 36px;
+  margin-top:50px;
+  margin-bottom: 0px;
+}
+#headerdiv {
+  width: 1150px;
+  margin: auto;
+}
+#abstract {
+  line-height: 1.3;
+  width: 900px;
+  font-size: 16px;
+}
+#maincontent {
+  width: 1000px;
+  margin: auto;
+  height: 340px;
+} 
+.center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#files {
+  color: #555555;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.contentrow {
+  display: flex; 
+  width: 100%;
+}
+.contentrow video{
+  border-radius: 5px;
+  width: 90%;
+  margin: 15px 0;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.figurecaption{
+  color: #1b1b1b;
+  text-align: center;
+  width: 90%;
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>SLIM</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="headerdiv">
+  <h1>
+    Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy
+  </h1>
+</div>
+<div id="maincontent">
+    <div class="content">
+        <div id="files" style="margin-top: 10px; text-align: center;">
+            [<a href="https://www.biorxiv.org/content/10.1101/2024.03.23.586416v2.full">bioRxiv</a>]&nbsp;&nbsp;&nbsp;
+            [<a href="https://www.biorxiv.org/content/10.1101/2024.03.23.586416v2.full">Supplements</a>]&nbsp;&nbsp;&nbsp;
+            [<a href="https://github.com/aaronzq/SLIM">Code</a>]&nbsp;&nbsp;&nbsp;   
+        </div>
+    
+        <div id="abstract" style="text-align:justify">
+        <h2> Abstract </h2>
+        SLIM addresses the sensor framerate bottleneck in light field microscopy by taking advantage of information redundancy in light field raw measurements. Using a series of optical image rotation and scaling, SLIM squeezes the raw measurement into a letterbox-like small region of interest on camera sensor. And a reconstruction algorithm reconstructs the squeezed measurement back into a 3D image stack in post-processing. Due to fewer number of pixels being readout, higher imaging speed could be achieved during acquisition. SLIM demonstrated kilohertz 3D imaging in blood flow of embryonic zebrafish, neuronal voltage signals of leech ganglion, and of hippocampus of behaving mice.
+        </div>
+
+        <div style="text-align: center;"><img src="assets/schematic.png" width="800"></a></div>
+    </div>
+    
+    <div class="content">
+        
+        <h2> Hemodynamic imaging </h2>
+        <div class="contentrow">
+            <div style="width: 33%;">
+                <video preload controls muted autoplay loop playsinline>
+                    <source src="./assets/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div style="width: 33%;">
+                <video preload controls muted autoplay loop playsinline>
+                    <source src="./assets/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div style="width: 33%;">
+                <video preload controls muted autoplay loop playsinline>
+                    <source src="./assets/video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="contentrow">
+            <div style="width: 67%;">
+                <div class="figurecaption">Flowing red blood cells in zebrafish brain. Captured at 1,000 volumes per second (vps).</div>  
+            </div>
+            <div style="width: 33%;">
+                <div class="figurecaption">Flowing red blood cells in unconstrained zebrafish tail @ 1,000 vps.</div>  
+            </div>
+        </div>
+
+        <h2> Voltage imaging </h2>
+        <div class="contentrow">
+            <div style="width: 50%;">
+                <video preload controls muted autoplay loop playsinline>
+                    <source src="./assets/video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div style="width: 50%;">
+                <div class="figurecaption" style="margin-top: 25%;">Voltage spikes in leech ganglion loaded with voltage dye @ 800 vps.</div>
+            </div>
+        </div>
+        <div style="text-align: center;"><img src="assets/voltage.png" width="100%"></a></div>
+        <div style="width: 100%;">
+            <div class="figurecaption">Voltage spikes in hippocampus in behaving mouse expressing genetic encoded voltage indicator @ 800 vps.</div>
+        </div>
+
+
+    </div>
+
+  <!-- <footer class="center" style="margin-bottom:10px; font-size: medium;">
+    <hr>
+    Thanks.
+  </footer> -->
+
+</body>
+
+</html>
