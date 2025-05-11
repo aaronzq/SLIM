@@ -2,10 +2,8 @@
 <html>
 
 <head>
-  <title>SLIM</title>
+  <title>Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy</title>
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
@@ -40,12 +38,22 @@
         SLIM addresses the sensor framerate bottleneck in light field microscopy by taking advantage of information redundancy in light field raw measurements. Using a series of optical image rotation and scaling, SLIM squeezes the raw measurement into a letterbox-like small region of interest on camera sensor. And a reconstruction algorithm reconstructs the squeezed measurement back into a 3D image stack in post-processing. Due to fewer number of pixels being readout, higher imaging speed could be achieved during acquisition. SLIM demonstrated kilohertz 3D imaging in blood flow of embryonic zebrafish, neuronal voltage signals of leech ganglion, and of hippocampus of behaving mice.
         </div>
 
-        <div style="text-align: center;"><img src="assets/schematic.png" width="800"></a></div>
+        <div style="text-align: center;"><img src="assets/schematic.png" width="100%"></a></div>
     </div>
+
+    <div class="content">
     
+        <div id="abstract" style="text-align:justify">
+        <h2> Demo </h2>
+        SLIM optially captures a small compressed frame (left) and digitally reconstructs it into 3D image stack (right). Demos of SLIM reconstruction can be found in <a href="https://github.com/aaronzq/SLIM">Code</a> where a graphic user interface is provided for quick walk-through.
+        </div>
+
+        <div style="text-align: center;"><img src="assets/example.png" width="100%"></a></div>
+    </div>    
+
     <div class="content">
         
-        <h2> Hemodynamic imaging </h2>
+        <h2> Hemodynamic imaging in behaving animal </h2>
         <div class="contentrow">
             <div style="width: 33%;">
                 <video preload controls muted autoplay loop playsinline>
@@ -68,14 +76,14 @@
         </div>
         <div class="contentrow">
             <div style="width: 67%;">
-                <div class="figurecaption">Flowing red blood cells in zebrafish brain. Captured at 1,000 volumes per second (vps).</div>  
+                <div class="figurecaption">Flowing red blood cells in zebrafish brain. Captured at <span class="highlight">1,000</span> volumes per second (vps).</div>  
             </div>
             <div style="width: 33%;">
-                <div class="figurecaption">Flowing red blood cells in unconstrained zebrafish tail @ 1,000 vps.</div>  
+                <div class="figurecaption">Flowing red blood cells in unconstrained swimming zebrafish tail @ <span class="highlight">1,000</span> vps.</div>  
             </div>
         </div>
 
-        <h2> Voltage imaging </h2>
+        <h2> Continuous 3D voltage imaging over extended time </h2>
         <div class="contentrow">
             <div style="width: 50%;">
                 <video preload controls muted autoplay loop playsinline>
@@ -89,16 +97,34 @@
         </div>
         <div style="text-align: center;"><img src="assets/voltage.png" width="100%"></a></div>
         <div style="width: 100%;">
-            <div class="figurecaption">Voltage spikes in hippocampus in behaving mouse expressing genetic encoded voltage indicator @ 800 vps.</div>
+            <div class="figurecaption">Voltage spikes in hippocampus in behaving mouse expressing genetic encoded voltage indicator @ 800 vps for three minutes continously. The red dots mark the detected spikes. Red lines (second row) delineate the sub-threshold oscillation in detected signals.</div>
         </div>
-
-
     </div>
 
-  <!-- <footer class="center" style="margin-bottom:10px; font-size: medium;">
-    <hr>
-    Thanks.
-  </footer> -->
+    <div class="content">
+        <h2> Vasculature and cardiac imaging</h2>
+        <div style="text-align: center;"><img src="assets/cardiac.png" width="100%"></a></div>
+        <div style="width: 100%;">
+            <div class="figurecaption">Vessels in zebrafish brain (left) and beating heart recorded @ 300 vps.</div>
+        </div>
+    </div>
+</div>
+
+<div id="footercontent">
+    <div class="content">
+        <h2>Contact</h2>
+        <div>Please cite our work if it helps your research. <a href="mailto:zqwang9@ucla.edu">Email</a> for any question. </div>
+        <div style="margin-top: 10px;">Wang, Z., Zhao, R., Wagenaar, D. A., Espino, D., Sheintuch, L., Benshlomo, O., ... & Gao, L. (2024). Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy. bioRxiv, 2024-03.</div>
+        
+    <footer class="center" style="margin-top:50px; margin-bottom:10px; font-size: small;">
+        <hr>
+        <span>&#169;</span> 2025 Zhaoqiang Wang.
+    </footer>
+    </div>
+</div>
+
+
+
 
 </body>
 
