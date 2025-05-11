@@ -3,7 +3,12 @@
 
 <h4 align="center">3D Reconstruction code for Squeezed Light field Microscopy (SLIM) using Richardson-Lucy Deconvolution</h4>
 
+<h4 align="center"><a href="https://aaronzq.github.io/SLIM/">Project page</a> &nbsp; &nbsp; <a href="https://www.biorxiv.org/content/10.1101/2024.03.23.586416v2.full">Preprint</a></h4>
+
+
 <img src='./assets/schematic.png' align="center" width=1000>
+
+
 
 ## Abstract
 SLIM addresses the sensor framerate bottleneck in light field microscopy by taking advantage of information redundancy in light field raw measurements. Using a series of optical image rotation and scaling, SLIM squeezes the raw measurement into a letterbox-like small region of interest on camera sensor. And a reconstruction algorithm reconstructs the squeezed measurement back into a 3D image stack in post-processing. Due to fewer number of pixels being readout, higher imaging speed could be achieved during acquisition. SLIM demonstrated __kilohertz 3D imaging__ in blood flow of embryonic zebrafish, neuronal voltage signals of leech ganglion, and of hippocampus of behaving mice. 
@@ -19,7 +24,7 @@ Tested on Matlab `2022a`, `2023a`, `2024a`. GPU acceleration with Parallel Compu
  
 
 ### Steps
-0. Download the code [repository](https://github.com/aaronzq/SLIM/tree/master). 
+0. Download the code [repository](https://github.com/aaronzq/SLIM/archive/refs/heads/master.zip). 
 1. Run the GUI software __SLF_ReconGUI.m__ in Matlab.
 <img src='./assets/gui_screenshot.png' align="right" width=400> 
 
