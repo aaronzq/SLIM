@@ -1,9 +1,13 @@
+[![paper](https://img.shields.io/badge/paper-Nat.%20Methods.-red)](https://www.nature.com/articles/s41592-025-02843-8)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16908320.svg)](https://doi.org/10.5281/zenodo.16908320)
+[![License](https://img.shields.io/github/license/aaronzq/SLIM)](https://github.com/aaronzq/SLIM)
+[![Website](https://img.shields.io/badge/website-pages-blue)](https://aaronzq.github.io/SLIM/)
 # Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy
 
 
 <h4 align="center">3D Reconstruction code for Squeezed Light field Microscopy (SLIM) using Richardson-Lucy Deconvolution</h4>
 
-<h4 align="center"><a href="https://aaronzq.github.io/SLIM/">Project page</a> &nbsp; &nbsp; <a href="https://www.biorxiv.org/content/10.1101/2024.03.23.586416v2.full">Preprint</a></h4>
+<h4 align="center"><a href="https://aaronzq.github.io/SLIM/">Project page</a> &nbsp; &nbsp; <a href="https://www.nature.com/articles/s41592-025-02843-8">Paper</a> &nbsp; &nbsp; <a href="https://www.biorxiv.org/content/10.1101/2024.03.23.586416v2.full">Preprint</a></h4>
 
 
 <img src='./assets/schematic.png' align="center" width=1000>
@@ -75,7 +79,7 @@ Note that:
 
 Please cite our work if you find it helpful.
 
-[Wang, Zhaoqiang, et al. "Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy." bioRxiv (2024)](https://www.biorxiv.org/content/10.1101/2024.03.23.586416v2.full)
+[Wang, Zhaoqiang, et al. "Kilohertz volumetric imaging of in-vivo dynamics using squeezed light field microscopy." Nat Methods (2025)](https://www.nature.com/articles/s41592-025-02843-8)
 
 
 
